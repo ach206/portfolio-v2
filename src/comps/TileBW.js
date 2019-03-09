@@ -9,6 +9,9 @@ class TileBW extends Component {
                     </div>
                     <div className="top-tile">
                         <h3 className={this.props.title}>{this.props.title}</h3>
+                        <a href="/">
+                        <i class="material-icons md-48 hvr-float-shadow">{this.props.icon}</i>
+                        </a>
                     </div>    
                 </div>
             </div>
@@ -17,3 +20,4 @@ class TileBW extends Component {
 }
 
 export default TileBW;
+
