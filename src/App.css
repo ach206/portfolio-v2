@@ -36,7 +36,7 @@ h1 , h2, h3, h4, h5, h6 {
   /* font-family: 'Concert One', cursive; */
   font-family: 'Viga', sans-serif;
 }
-.top-tile h3 {
+.top-tile h2 {
   font-weight: 700;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -101,7 +101,6 @@ img {
   left: 2%;
   display: flex;
   flex-direction: column;
-  
 }
 .bottom-tile{
   background-color: black;
@@ -179,4 +178,20 @@ img {
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+.tile_title_cnt {
+  --maskX: 50;
+  --maskY: 100;
+  position: relative;
+}
+
+h2#gallery1, h2#resume1, h2#about1 {
+  color: plum;
+}
+h2#gallery2, h2#resume2, h2#about2 {
+  color: rgb(134, 24, 134);
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 50% 100%, 0 0, 0% 100%)
 }
