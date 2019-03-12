@@ -14,9 +14,9 @@ class App extends Component {
       <TypingAni />
         </div>
         <div className="tiles-cntr">
-      <TileBW tileID={1} title={"about"}/>
-      <TileBW tileID={2} title={"gallery"}/>
-      <TileBW tileID={3} title={"resume"}/>
+      <TileBW tileID={1} title={"about"} icon={"fingerprint"} asset={"inactive-asset"}/>
+      <TileBW tileID={2} title={"gallery"} icon={"important_devices"} asset={"inactive-asset"}/>
+      <TileBW tileID={3} title={"resume"} icon={"description"} asset={"triangle"} />
         </div>
 
       </div>
