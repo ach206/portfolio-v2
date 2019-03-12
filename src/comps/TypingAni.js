@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js';
 let data = {
-    strings: ["Frontend Web Dev", "UI Engineer"],
+    strings: ["Frontend Web Dev", "UI Engineer", "Camille Hall"],
     typeSpeed: 40
 }
 let typedEl;
