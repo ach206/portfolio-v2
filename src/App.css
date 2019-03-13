@@ -79,6 +79,7 @@ img {
 
 .tileCntr {
   display: inline-grid;
+  margin: 1.5em auto;
 }
 .tiles {
   display: flex;
@@ -90,6 +91,7 @@ img {
   max-height: 650px;
   min-width: 300px;
   max-width: 400px;
+  margin: 1.5em auto;
 }
 .top-tile {
   background-color: white;
@@ -185,13 +187,20 @@ img {
   position: relative;
 }
 
-h2#gallery1, h2#resume1, h2#about1 {
+h3#gallery1, h3#resume1, h3#about1 {
   color: plum;
 }
-h2#gallery2, h2#resume2, h2#about2 {
+h3#gallery2, h3#resume2, h3#about2 {
   color: rgb(134, 24, 134);
   position: absolute;
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 50% 100%, 0 0, 0% 100%)
+}
+/* ******* ABOUT SECTION ********* */
+.about_section, .resume_section {
+  width: 100vw;
+  height: 100vh;
+  margin: 1.5em auto;
+  /* border: 1px solid green; */
 }
