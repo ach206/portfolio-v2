@@ -1,13 +1,15 @@
 body {
   background-color: white;
-  background-image: url(./images/curvydiv.png);
+  font-family: 'Lato', sans-serif;
+  min-height: 1000px;
+  text-align: center;
+}
+.home {
+  /* background-image: url(./images/curvydiv.png); */
+  background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  font-family: 'Lato', sans-serif;
-  background-position: bottom;
-  min-height: 1000px;
 }
-
 
 .App {
   text-align: center;
@@ -58,6 +60,10 @@ h1 , h2, h3, h4, h5, h6 {
   padding: 0 80px;
 }
 
+.typed-cursor {
+  /* matches about size */
+  font-size: 2em;
+}
 .header {
   width: 100vw;
   min-height: 80px;
@@ -66,7 +72,7 @@ h1 , h2, h3, h4, h5, h6 {
 
 img {
   min-width: 50px;
-  width: calc(100% / 10);
+  width: calc(100% / 5);
 }
 
 /* tiles */
@@ -209,3 +215,8 @@ h3#gallery2, h3#resume2, h3#about2 {
   margin: 1.5em auto;
   /* border: 1px solid green; */
 }
+.about_section {
+  display: initial;
+}
+
+/*------- fullpage styles------------- */
