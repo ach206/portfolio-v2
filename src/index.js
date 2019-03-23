@@ -16,8 +16,10 @@ import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import './App.css';
 import logo from './images/braidout-black-logo.png';
+import CamilleImg from './images/DSC3135.jpg';
 import TypingAni from './comps/TypingAni';
 import About from './comps/About';
+import BlockText from './comps/BlockText';
 
 
 const anchors = ["Home", "About", "Gallery", "Resume"];
@@ -32,7 +34,7 @@ const Fullpage = () => (
         <ReactFullpage.Wrapper>
           <div className="section home">
         <img src={logo} alt="logo" id={logo}/>
-      < TypingAni / >
+      < TypingAni />
 
             {/* <p>Section 1 (welcome to fullpage.js)</p>
             <button onClick={() => fullpageApi.moveSectionDown()}>
@@ -40,11 +42,16 @@ const Fullpage = () => (
             </button> */}
           </div>
           <div className="section about">
-            < About/>
+          < BlockText />
+            < About />
+            <figure>
+            <img src={CamilleImg} alt="photo of Camille" />
+            <figcaption>Photographer: Gabrielle Prawl</figcaption>
+            </figure>
           </div>
           <div className="section gallery">
-            <p>Section 2</p>
-            <p>gallery</p>
+            <div class="slide" data-anchor="slide1">Two 1</div>
+            <div class="slide" data-anchor="slide2">Two 2</div>
           </div>
           <div className="section contact">
             <p>Section 2</p>
