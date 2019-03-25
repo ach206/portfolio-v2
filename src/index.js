@@ -1,39 +1,32 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-
-// // If you want your app to work offline and load faster, you can change
-// // unregister() to register() below. Note this comes with some pitfalls.
-// // Learn more about service workers: http://bit.ly/CRA-PWA
-// serviceWorker.unregister();
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import './App.css';
 import logo from './images/braidout-black-logo.png';
-import CamilleImg from './images/DSC3135.jpg';
+import GirlBombImg from './images/macbook-mock-dribbble.png';
 import TypingAni from './comps/TypingAni';
 import About from './comps/About';
 import BlockText from './comps/BlockText';
+import styled from 'styled-components';
+// import * as serviceWorker from './serviceWorker';
+
 
 
 const anchors = ["Home", "About", "Gallery", "Resume"];
 const Fullpage = () => (
   <ReactFullpage
-//   sectionsColor={["#282c34", "#ff5f45", "#0798ec", "#2d8460"]}
+  //   sectionsColor={["#282c34", "#ff5f45", "#0798ec", "#2d8460"]}
   anchors={anchors}
   navigation
   navigationTooltips={anchors}
+  css3={true}
+	autoScrolling={true}
+    fadingEffect={true}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section home">
-        <img src={logo} alt="logo" id={logo}/>
+          < div className = "section home fp-auto-height-responsive" >
+        <img src={logo} alt="logo" class="home-img"/>
       < TypingAni />
 
             {/* <p>Section 1 (welcome to fullpage.js)</p>
@@ -41,17 +34,24 @@ const Fullpage = () => (
               Click me to move down
             </button> */}
           </div>
-          <div className="section about">
+          < div className ="section about fp-auto-height-responsive" >
+          <div className="about">
+
           < BlockText />
             < About />
-            <figure>
-            <img src={CamilleImg} alt="photo of Camille" />
+            {/* <img src={CamilleImg} alt="Camille" class="about-img"/> */}
+            {/* <figure>
             <figcaption>Photographer: Gabrielle Prawl</figcaption>
-            </figure>
+            </figure> */}
+            </div>
           </div>
           <div className="section gallery">
-            <div class="slide" data-anchor="slide1">Two 1</div>
-            <div class="slide" data-anchor="slide2">Two 2</div>
+            <div class="slide" data-anchor="slide1">
+              <img data-src={GirlBombImg} alt="GirlBomb Project" />
+            </div>
+            <div class="slide" data-anchor="slide2">
+              <img data-src={GirlBombImg} alt="" />
+            </div>
           </div>
           <div className="section contact">
             <p>Section 2</p>
@@ -60,7 +60,13 @@ const Fullpage = () => (
         </ReactFullpage.Wrapper>
       );
     }}
-  />
+    />
 );
 
 ReactDOM.render(<Fullpage />, document.getElementById('root'));
+
+
+    // // If you want your app to work offline and load faster, you can change
+    // // unregister() to register() below. Note this comes with some pitfalls.
+    // // Learn more about service workers: http://bit.ly/CRA-PWA
+    // serviceWorker.unregister();
