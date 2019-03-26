@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import './App.css';
 import logo from './images/braidout-black-logo.png';
-import GirlBombImg from './images/macbook-mock-dribbble.png';
+import PlaceholderImg from './images/macbook-mock-dribbble.svg';
 import TypingAni from './comps/TypingAni';
 import About from './comps/About';
+// import GalleryCard from './comps/GalleryCard';
 import BlockText from './comps/BlockText';
-import styled from 'styled-components';
+import ApriImg from './images/apri-mac.png';
+import BODImg from './images/bandsondemand-mac.png';
+import CSClubImg from './images/csclub-mac.png';
+import EdenSavvyImg from './images/edensavvy-mac-3.png';
+import FroggerImg from './images/frogger-mac.png';
+import FullmoonReleaseImg from './images/fullmoon-release-mac.png';
+import GirlBombImg from './images/girlbomb-mac.png';
+import GitHubImg from './images/githubUniverse-mac-2.png';
+import KdramaImg from './images/kdrama-mac.png';
+import KdramaFbImg from './images/kdrama-fb-mac.png';
+import matchGameImg from './images/matchingGame-mac.png';
 // import * as serviceWorker from './serviceWorker';
 
 
@@ -15,9 +26,9 @@ import styled from 'styled-components';
 const anchors = ["Home", "About", "Gallery", "Resume"];
 const Fullpage = () => (
   <ReactFullpage
-  //   sectionsColor={["#282c34", "#ff5f45", "#0798ec", "#2d8460"]}
   anchors={anchors}
   navigation
+  //   sectionsColor={["#282c34", "#ff5f45", "#0798ec", "#2d8460"]}
   navigationTooltips={anchors}
   css3={true}
 	autoScrolling={true}
@@ -39,23 +50,139 @@ const Fullpage = () => (
 
           < BlockText />
             < About />
-            {/* <img src={CamilleImg} alt="Camille" class="about-img"/> */}
-            {/* <figure>
-            <figcaption>Photographer: Gabrielle Prawl</figcaption>
-            </figure> */}
             </div>
           </div>
           <div className="section gallery">
             <div class="slide" data-anchor="slide1">
-              <img data-src={GirlBombImg} alt="GirlBomb Project" />
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+             <img class="gallery-img" data-src={ApriImg} />
+             {/* <GalleryCard stack={'HTML'} projectName="GirlBomb" description="SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied."/>  */}
             </div>
             <div class="slide" data-anchor="slide2">
-              <img data-src={GirlBombImg} alt="" />
+            <div class="gallery-cntr">
+              <h3>GirlBomb</h3>
+              <div class="gallery-overlay">
+              <p class="gallery-content"><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              </div>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={BODImg} alt="gallery"/>
+              </div>
+            </div>
+            <div class="slide" data-anchor="slide3">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={CSClubImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide4">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={EdenSavvyImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide5">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={FroggerImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide6">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={FullmoonReleaseImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide7">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={GirlBombImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide8">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={KdramaImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide9">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={KdramaFbImg} alt="gallery"/>
+            </div>
+            <div class="slide" data-anchor="slide10">
+              <h3>GirlBomb</h3>
+              <p><span class="gallery-description">SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied.</span></p>
+              <ul class="list-stack">
+                <li class="list-stack-item">Python</li>
+                <li class="list-stack-item">JavaScript</li>
+                <li class="list-stack-item">React.js</li>
+                <li class="list-stack-item">Three.js</li>
+              </ul>
+              <a href="#">See Demo</a>
+              <img class="gallery-img" data-src={matchGameImg} alt="gallery"/>
             </div>
           </div>
           <div className="section contact">
             <p>Section 2</p>
             <p>contact</p>
+              <img class="gallery-img" data-src={GitHubImg} alt="gallery"/>
           </div>
         </ReactFullpage.Wrapper>
       );

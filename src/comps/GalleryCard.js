@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PlaceholderImg from '../images/macbook-mock-dribbble.svg';
 
 const p = this.props;
-let stack = p.stack;
+let stack = p.stack.map((s, i) => 
+    `<li key=${i}>${s}</li>`
+);
 
 class GalleryCard extends Component {
     render() {
@@ -13,20 +16,17 @@ class GalleryCard extends Component {
                 </ProjectName>
                 <ProjectStack>
                     <ul>
-                    stack.map(s, i =>{
-                        `<li key=${i}>${s}</li>`
-                    } );
+                    {stack}
                     </ul>
                 </ProjectStack>
                 <ProjectDescription>
                     <p>{p.description}</p>
                 </ProjectDescription>
                 <ProjectImg>
-                    <img src={p.image} alt={p.projectName} id={p.projectName} />
+                    <img data-src={PlaceholderImg} alt={p.projectName} id={p.projectName} />
                 </ProjectImg>
                 <ProjectURL>
-                    <a href={p.image} alt={p.projectName} id={p.projectName} />
-                    {/* //fix this``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````` */}
+                    <a href="#" alt={p.projectName} id={p.projectName} />
                 </ProjectURL>
 
                 
