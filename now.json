@@ -1,3 +1,36 @@
 {
-    "alias": ["creativeambition.net"]
-}
+        "version": 2,
+        "alias": ["www.creativeambition.net", "creativeambition.net"],
+        "name": "portfolio-v2",
+        "builds": [
+          {
+            "src": "package.json",
+            "use": "@now/static-build",
+            "config": { "distDir": "build" }
+          }
+        ],
+        "routes": [
+          {
+            "src": "/static/(.*)",
+            "headers": { 
+                "cache-control": "s-maxage=31536000,immutable",
+                "Location": "https://creativeambition.net/$1"
+            },
+            "dest": "/static/$1"
+          },
+          { "src": "/favicon_package_v0.16/favicon.ico", "dest": "/favicon.ico" },
+          { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
+          { "src": "/manifest.json", "dest": "/manifest.json" },
+          { "src": "/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
+          {
+            "src": "/service-worker.js",
+            "headers": { "cache-control": "s-maxage=0" },
+            "dest": "/service-worker.js"
+          },
+          {
+            "src": "/(.*)",
+            "headers": { "cache-control": "s-maxage=0" },
+            "dest": "/index.html"
+          }
+        ]
+      }
