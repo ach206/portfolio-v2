@@ -24,7 +24,7 @@ import resumeImg from './images/resume-pic.png';
 import resumePdfView from './data/resume.pdf';
 import pdf from './data/resume.pdf';
 
-// import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 let displayLivePdf = () => {
@@ -296,4 +296,4 @@ ReactDOM.render(<Fullpage />, document.getElementById('root'));
     // // If you want your app to work offline and load faster, you can change
     // // unregister() to register() below. Note this comes with some pitfalls.
     // // Learn more about service workers: http://bit.ly/CRA-PWA
-    // serviceWorker.unregister();
+    serviceWorker.register();
