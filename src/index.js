@@ -37,7 +37,7 @@ const Fullpage = () => (
   <ReactFullpage
   anchors={anchors}
   navigation
-  sectionsColor={["#ffffff", "#ffffff" ,"#ffffff", "gold", "#ffffff"]}
+  sectionsColor={["#ffffff", "#ffffff" ,"#ffffff", "#0f151f", "#ffffff"]}
   navigationTooltips={anchors}
   css3={true}
 	autoScrolling={true}
@@ -259,10 +259,10 @@ const Fullpage = () => (
 
           </div>
           <div className="section feature">
-              <img className="gallery-img" data-src={GitHubImg} alt="gallery"/>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <h2>Want more? Check out my interview from <a href="https://www.youtube.com/watch?v=WSi_GxfCCA8&t=63m30s" target="_blank"> GitHub Universe 2018</a></h2>
           </div>
-          <div className="section contact">
+          <div className="section contact fp-auto-height-responsive">
           <div className="contactCntr">
           <div className="contact-right-aside">
           <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ach206"><a class="LI-simple-link" href='https://www.linkedin.com/in/ach206?trk=profile-badge'>Camille Hall</a></div>
