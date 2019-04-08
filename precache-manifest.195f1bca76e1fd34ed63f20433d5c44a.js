@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/edensavvy-mac-3_md.9e2f34bc.png"
   },
   {
-    "revision": "66c871e3f3002809cf62",
+    "revision": "022685580f3f36f8db2d",
     "url": "/static/css/main.5a7eaa5d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/js/2.5fb5c316.chunk.js"
   },
   {
-    "revision": "2225c42b5c60f8660a609f6e609e6bdf",
-    "url": "/static/media/resume.2225c42b.pdf"
+    "revision": "13c1e500a0f81dbc68c7be0fef8ab7c2",
+    "url": "/static/media/resume.13c1e500.pdf"
   },
   {
     "revision": "f3f01997ecd929bb461df7804dd45524",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/static/media/csclub-mac_md.13768963.png"
   },
   {
-    "revision": "66c871e3f3002809cf62",
-    "url": "/static/js/main.66c871e3.chunk.js"
+    "revision": "022685580f3f36f8db2d",
+    "url": "/static/js/main.02268558.chunk.js"
   },
   {
     "revision": "ab79c0fd0c8930cfb8d88bc51aeba206",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/static/media/resume-pic.2b01b1a1.png"
   },
   {
-    "revision": "4342853390f075cb360e1c841b612e26",
+    "revision": "4f96e281048231ad082bc41b1c943c53",
     "url": "/index.html"
   }
 ];
