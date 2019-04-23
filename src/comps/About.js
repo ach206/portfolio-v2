@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import CamilleImg from './../images/DSC3135.jpg';
 
 
@@ -38,11 +37,3 @@ class About extends Component {
 }
 
 export default About;
-
-const AboutImg = styled.div `
-    
-`;
-
-const AboutSection = styled.div `
-    
-`;
