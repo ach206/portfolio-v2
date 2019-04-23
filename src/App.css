@@ -138,7 +138,7 @@ ul.list-stack {
 .gallery-demo-btn {
   text-decoration: none;
   font-family: inherit;
-  padding: .5em;
+  margin: .5em;
   z-index: 3;
 }
 
@@ -160,6 +160,10 @@ ul.list-stack {
 
 .read-more-text {
   display: none;
+}
+
+.read-more-btn {
+  margin: .5em auto;
 }
 /* *******FEATURE PAGE********** */
 .feature h2 {

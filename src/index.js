@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Document , Page, pdfjs} from 'react-pdf';
@@ -53,10 +53,13 @@ class App extends React.Component {
  showHide(evt) {
    let dots = document.getElementsByClassName('read-more-dots');
    let moreText = document.getElementsByClassName('read-more-text');
+   let moreBtn = document.getElementsByClassName('read-more-btn');
     if(dots[evt.currentTarget.value].style.display === "none"){
       dots[evt.currentTarget.value].style.display = "inline";
       moreText[evt.currentTarget.value].style.display = "none";
+      moreBtn[evt.currentTarget.value].innerHTML = "Read more";
     } else {
+      moreBtn[evt.currentTarget.value].innerHTML = "Read less";
       dots[evt.currentTarget.value].style.display = "none";
       moreText[evt.currentTarget.value].style.display = "inline";
     }
@@ -70,7 +73,7 @@ class App extends React.Component {
   return (
   <div className="App">
 
-  const Fullpage = () => (
+  {/* const Fullpage = () => ( */}
   <ReactFullpage
   anchors={anchors}
   navigation
@@ -89,11 +92,6 @@ class App extends React.Component {
           <div className="section home fp-auto-height-responsive">
         <img src={logo} alt="logo" className="home-img"/>
       < TypingAni />
-
-            {/* <p>Section 1 (welcome to fullpage.js)</p>
-            <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button> */}
           </div>
           <div className="section about fp-auto-height-responsive">
           <div className="about">
@@ -120,7 +118,7 @@ class App extends React.Component {
  visuals and overall best practice for optimal user experience. </span></p>
  <ReadMoreBtn showhide={this.showHide} buttonId={0}/>
 
-                 <a href="https://apriseattle.org" target="_blank" className="gallery-demo-btn">See Demo</a>
+                 <a href="https://apriseattle.org" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
             </div>
              <img className="gallery-img" data-src={ApriImg} alt="APRI project" />
              {/* <GalleryCard stack={'HTML'} projectName="GirlBomb" description="SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied."/>  */}
@@ -228,7 +226,7 @@ class App extends React.Component {
                 <li className="list-stack-item">Unsplash</li>
               </ul>
               <p className="gallery-description">An expressive piece of photo collage art represenative of
-              the purging of old baggage<span className="read-more-dots show">...</span><span className="read-more-text hide"> that happens during each full moon cycle. </span></p>  
+              the purging of old baggage<span className="read-more-dots show">...</span><span className="read-more-text hide"> that happens during each full moon cycle. </span></p>   <ReadMoreBtn showhide={this.showHide} buttonId={5}/>
                <a href="https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <img className="gallery-img" src={FullmoonReleaseImg} alt="gallery"/>
@@ -246,9 +244,10 @@ class App extends React.Component {
                 <li className="list-stack-item">HTML/CSS</li>
                 <li className="list-stack-item">Wix</li>
               </ul>
-              <p className="gallery-description">Assisted in redesigning an existing website including creating prototypes, graphics
+              <p className="gallery-description">Assisted in redesigning an existing website including creating prototypes,<span className="read-more-dots show">...</span><span className="read-more-text hide">  graphics
               and optimizing images for the company’s web pages in time for their new product
-              launch.</p>  
+              launch.</span></p>   
+              <ReadMoreBtn showhide={this.showHide} buttonId={6}/>
                <a href="https://www.girlbomb.com/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <img className="gallery-img" src={GirlBombImg} alt="gallery"/>
@@ -266,8 +265,9 @@ class App extends React.Component {
                   <li className="list-stack-item">Adobe Illustrator</li>
                   <li className="list-stack-item">Shopify</li>
                 </ul>
-                  <p className="gallery-description">Redesigned eCommerce website, created company logo, and produced marketing graphics
-                  that increased web traffic by 33%.</p>
+                  <p className="gallery-description">Redesigned eCommerce website, created company logo,<span className="read-more-dots show">...</span><span className="read-more-text hide">  and produced marketing graphics
+                  that increased web traffic by 33%.</span></p>
+                  <ReadMoreBtn showhide={this.showHide} buttonId={7}/>
                  <a href="https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
                 </div>
               <img className="gallery-img" src={KdramaImg} alt="gallery"/>
@@ -282,7 +282,8 @@ class App extends React.Component {
                 <li className="list-stack-item list-title">Stack</li>
                 <li className="list-stack-item">Adobe Photoshop</li>
               </ul>
-                <p className="gallery-description">Lead designer for this client's Facebook campaigns. Established, designed and managed implementation and consistency of brand guidelines for marketing assets and other web graphics.</p>  
+                <p className="gallery-description">Lead designer for this client's Facebook campaigns. Established, <span className="read-more-dots show">...</span><span className="read-more-text hide">designed and managed implementation and consistency of brand guidelines for marketing assets and other web graphics.</span></p>  
+                <ReadMoreBtn showhide={this.showHide} buttonId={8}/>
                <a href="https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <img className="gallery-img" src={KdramaFbImg} alt="gallery"/>
@@ -299,7 +300,8 @@ class App extends React.Component {
                 <li className="list-stack-item">JavaScript</li>
                 <li className="list-stack-item">CSS</li>
               </ul>
-              <p className="gallery-description"> All hail the matching game! This one holds a speical place in my heart because it was my first ever programming project.The memory game represented my first opportunity to fully combine my skills in HTML, CSS, and JavaScript. The primary focus was centered around event handlers and functions. Future developments include refactoring to ES6 and redesigning the UI. </p>  
+              <p className="gallery-description"> All hail the matching game! This one holds a speical place in my heart because it was my first <span className="read-more-dots show">...</span><span className="read-more-text hide">ever programming project.The memory game represented my first opportunity to fully combine my skills in HTML, CSS, and JavaScript. The primary focus was centered around event handlers and functions. Future developments include refactoring to ES6 and redesigning the UI. </span></p>  
+              <ReadMoreBtn showhide={this.showHide} buttonId={9}/>
                <a href="https://ach206.github.io/memory-game/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <img className="gallery-img" src={matchGameImg} alt="gallery"/>
@@ -309,7 +311,7 @@ class App extends React.Component {
           </div>
           <div className="section feature">
           <div className="slide" data-anchor="slide1">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe title="GitHub Universe Interview with Camille" width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameBorder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               <h2>Want more? Check out my interview from <a href="https://www.youtube.com/watch?v=WSi_GxfCCA8&t=63m30s" target="_blank" rel="noopener noreferrer"> GitHub Universe 2018</a></h2>
             </div>
           <div className="slide" data-anchor="slide2">
@@ -331,15 +333,6 @@ class App extends React.Component {
           <Page pageNumber={1}/>
           </Document>
           </div>
-          
-            {/* <div className="contact-cv">
-              < a href = "./data/resume.pdf" >
-                <img src={resumeImg} alt="resume CV" />
-                <div className="overlay">
-                  <div className="resume-hover-text">Download Camille's Resume</div>
-                </div>
-              </a>
-            </div> */}
           </div>
         </ReactFullpage.Wrapper>
     );
@@ -348,13 +341,6 @@ class App extends React.Component {
   />
   </div>
 );
-function readMore() {
-  console.log('it hits');
-  let dots = document.getElementsByClassName("gallery-read-more-dots");
-  let moreText = document.getElementsByClassName("gallery-read-more");
-  let btnText = document.getElementsByClassName("read-more-btn");
-
-}
 }
 }
 
