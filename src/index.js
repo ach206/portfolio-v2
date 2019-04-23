@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Document , Page, pdfjs} from 'react-pdf';
@@ -8,6 +8,7 @@ import TypingAni from './comps/TypingAni';
 import About from './comps/About';
 import BlockText from './comps/BlockText';
 import Footer from './comps/Footer';
+import ReadMoreBtn from './comps/ReadMoreBtn';
 
 import ApriImg from './images/apri-mac_md.png';
 import BODImg from './images/bandsondemand-mac_md.png';
@@ -23,29 +24,65 @@ import resumePdfView from './data/resume.pdf';
 import pdf from './data/resume.pdf';
 
 
+
 import * as serviceWorker from './serviceWorker';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+class App extends React.Component {
+  state = {
+    readMoreBtnVisible: true,
+  };
+  constructor(props) {
+    super(props);
+    this.showHide = this.showHide.bind(this);
 
-let displayLivePdf = () => {
-  window.open(pdf, '_blank');
-}
-let showHide = (evt) => {
-  console.log(evt);
-}
-
-const anchors = ["Home", "About", "Gallery", "Press", "Resume"];
-const Fullpage = () => (
+  }
   
+  displayLivePdf() {
+    window.open(pdf, '_blank');
+  }
+    // if (dots.style.display === "none") {
+  //   dots["0"].style.display = "inline";
+  //   btnText["0"].innerHTML = "Read more";
+  //   moreText["0"].style.display = "none";
+  // } else {
+  //   dots["0"].style.display = "none";
+  //   btnText["0"].innerHTML = "Read less";
+  //   moreText["0"].style.display = "inline";
+  // }
+ showHide(evt) {
+   let dots = document.getElementsByClassName('read-more-dots');
+   let moreText = document.getElementsByClassName('read-more-text');
+    if(dots[evt.currentTarget.value].style.display === "none"){
+      dots[evt.currentTarget.value].style.display = "inline";
+      moreText[evt.currentTarget.value].style.display = "none";
+    } else {
+      dots[evt.currentTarget.value].style.display = "none";
+      moreText[evt.currentTarget.value].style.display = "inline";
+    }
+  }
+  
+  render() {
+    
+  const anchors = ["Home", "About", "Gallery", "Press", "Resume"];
+  
+  
+  return (
+  <div className="App">
+
+  const Fullpage = () => (
   <ReactFullpage
   anchors={anchors}
   navigation
-  sectionsColor={["#ffffff", "#ffffff" ,"#ffffff", "#0f151f", "#ffffff"]}
   navigationTooltips={anchors}
   css3={true}
 	autoScrolling={true}
   fadingEffect={true}
+  sectionsColor={["#ffffff", "#ffffff" ,"#ffffff", "#0f151f", "#ffffff"]}
   render={({ state, fullpageApi }) => {
+    // state = {
+    //   readMoreBtnVisible: true,
+    // }
     return (
       <ReactFullpage.Wrapper>
 
@@ -79,9 +116,9 @@ const Fullpage = () => (
                   <li className="list-stack-item">Photoshop</li>
                   <li className="list-stack-item">jQuery</li>
                 </ul>
-                  <p className="gallery-description">As the UI Designer on this project I assisted this non-profit organization with redesigning their UI for their January 2019 website<span className="read-more-dots">...</span><span className="read-more-text"> launch. Duties included translated mockups into responsive, interactive features, using HTML/CSS and JavaScript. In addition to collaborating with the Marketing Director to define and implement product direction,
+                  <p className="gallery-description">As the UI Designer on this project I assisted this non-profit organization with redesigning their UI for their January 2019 website<span className="read-more-dots show">...</span><span className="read-more-text hide"> launch. Duties included translated mockups into responsive, interactive features, using HTML/CSS and JavaScript. In addition to collaborating with the Marketing Director to define and implement product direction,
  visuals and overall best practice for optimal user experience. </span></p>
-               <button onClick={(evt) => { showHide(evt.target) }} className="read-more-btn">Read more</button>
+ <ReadMoreBtn showhide={this.showHide} buttonId={0}/>
 
                  <a href="https://apriseattle.org" target="_blank" className="gallery-demo-btn">See Demo</a>
             </div>
@@ -105,11 +142,11 @@ const Fullpage = () => (
 
               </ul>
               <p className="gallery-description">This personal project required engineering a web-based application using React to develop the
-                UI<span className="gallery-read-more-dots">...</span><span className="gallery-read-more">. This app assists with finding venues that host live music bands in the Austin, TX area. Google
+                UI<span className="read-more-dots">...</span><span className="read-more-text">. This app assists with finding venues that host live music bands in the Austin, TX area. Google
                 Maps API and Foursquare API were used to extract real-time data. Fetch was used to make
                 asynchronous requests and handle returned data. Also, best practices included consistent use of
                 the command line and Git for version control.</span></p>
-                <button onClick={ readMore() } className="read-more-btn">Read more</button>
+                <ReadMoreBtn showhide={this.showHide} buttonId={1}/>
 
                <a href="https://ach206.github.io/bands-on-demand" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
@@ -132,9 +169,10 @@ const Fullpage = () => (
 
                 </ul>
                   <p className="gallery-description">This project consisted of engineering a PHP 
-                  website from conception to deployment for Highline College's Computer Science Club. Highlighted 
+                  website from conception to deployment<span className="read-more-dots show">...</span><span className="read-more-text hide">  for Highline College's Computer Science Club. Highlighted 
                   features include a sleek dark-theme design and also an Admin portal which allows 
-                  administrators to securely modify stored content on the database. </p>
+                  administrators to securely modify stored content on the database. </span></p>
+                  <ReadMoreBtn showhide={this.showHide} buttonId={2}/>
                  <a href="https://chelan.highline.edu/~ach206/215/Final_Computer_Science_Club/pages/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
                 </div>
               <img className="gallery-img" src={CSClubImg} alt="gallery"/>
@@ -150,8 +188,10 @@ const Fullpage = () => (
                   <li className="list-stack-item">Adobe Illustrator</li>
                   <li className="list-stack-item">Adobe Photoshop</li>
                 </ul>
-                  <p className="gallery-description">Assisted a startup company in converting hard copy paper decals into digital vector
-                  graphics to be able to reach a larger customer base and boost sales.</p>
+                  <p className="gallery-description">Assisted a startup company in converting hard copy paper decals into digital vector<span className="read-more-dots show">...</span><span className="read-more-text hide"> 
+                  graphics to be able to reach a larger customer base and boost sales.</span></p>
+                  <ReadMoreBtn showhide={this.showHide} buttonId={3}/>
+
                  <a href="https://www.behance.net/gallery/71068113/Digital-Templates" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
                 </div>
               <img className="gallery-img" src={EdenSavvyImg} alt="gallery"/>
@@ -169,7 +209,9 @@ const Fullpage = () => (
                   <li className="list-stack-item">CSS</li>
                   <li className="list-stack-item">Git version control</li>
                 </ul>
-                  <p className="gallery-description">Used HTML's Canvas and JavaScript's ES6 Class to implement entities to the game including the player character and enemies to recreate the classic 1981 arcade game Frogger. Game Engine loop provided by <a href="https://udacity.com">Udacity</a></p>
+                  <p className="gallery-description">Used HTML's Canvas and JavaScript's ES6 Class to implement <span className="read-more-dots show">...</span><span className="read-more-text hide">entities to the game including the player character and enemies to recreate the classic 1981 arcade game Frogger. Game Engine loop provided by <a href="https://udacity.com">Udacity</a></span></p>
+                  <ReadMoreBtn showhide={this.showHide} buttonId={4}/>
+
                  <a href="https://ach206.github.io/frontend-nanodegree-arcade-game/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
                 </div>
               <img className="gallery-img" src={FroggerImg} alt="gallery"/>
@@ -186,7 +228,7 @@ const Fullpage = () => (
                 <li className="list-stack-item">Unsplash</li>
               </ul>
               <p className="gallery-description">An expressive piece of photo collage art represenative of
-              the purging of old baggage that happens during each full moon cycle. </p>  
+              the purging of old baggage<span className="read-more-dots show">...</span><span className="read-more-text hide"> that happens during each full moon cycle. </span></p>  
                <a href="https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <img className="gallery-img" src={FullmoonReleaseImg} alt="gallery"/>
@@ -284,7 +326,7 @@ const Fullpage = () => (
 
           <Footer/>
           </div>
-          <Document file={resumePdfView}  className="pdf-doc hvr-pulse-grow" onClick={(evt) => { displayLivePdf() }}
+          <Document file={resumePdfView}  className="pdf-doc hvr-pulse-grow" onClick={this.displayLivePdf }
           >
           <Page pageNumber={1}/>
           </Document>
@@ -300,27 +342,24 @@ const Fullpage = () => (
             </div> */}
           </div>
         </ReactFullpage.Wrapper>
-      );
-    }}
-    />
+    );
+    // );
+  }}
+  />
+  </div>
 );
 function readMore() {
   console.log('it hits');
   let dots = document.getElementsByClassName("gallery-read-more-dots");
   let moreText = document.getElementsByClassName("gallery-read-more");
   let btnText = document.getElementsByClassName("read-more-btn");
-  // if (dots.style.display === "none") {
-  //   dots["0"].style.display = "inline";
-  //   btnText["0"].innerHTML = "Read more";
-  //   moreText["0"].style.display = "none";
-  // } else {
-  //   dots["0"].style.display = "none";
-  //   btnText["0"].innerHTML = "Read less";
-  //   moreText["0"].style.display = "inline";
-  // }
+
+}
+}
 }
 
-ReactDOM.render(<Fullpage />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, rootElement);
 
 
     // // If you want your app to work offline and load faster, you can change
