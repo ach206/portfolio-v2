@@ -154,6 +154,13 @@ ul.list-stack {
   overflow: overlay;
 }
 
+.read-more-dots {
+  display: inline-block;
+}
+
+.read-more-text {
+  display: none;
+}
 /* *******FEATURE PAGE********** */
 .feature h2 {
   color: #ffffff;
@@ -298,7 +305,15 @@ li.socialIcons {
   color: white;
   background: #2e6195;
 }
+/* read more read less */
 
+.read-more-dots, .read-more-btn {
+  display: none;
+}
+
+.read-more-text {
+  display: inline-block;
+}
 
 }
 
