@@ -16,11 +16,9 @@ import EdenSavvyImg from './images/edensavvy-mac-3_md.png';
 import FroggerImg from './images/frogger-mac_md.png';
 import FullmoonReleaseImg from './images/fullmoon-release-mac_md.png';
 import GirlBombImg from './images/girlbomb-mac_md.png';
-import GitHubImg from './images/githubUniverse-mac-2_md.png';
 import KdramaImg from './images/kdrama-mac_md.png';
 import KdramaFbImg from './images/kdrama-fb-mac_md.png';
 import matchGameImg from './images/matchingGame-mac_md.png';
-import resumeImg from './images/resume-pic.png';
 import resumePdfView from './data/resume.pdf';
 import pdf from './data/resume.pdf';
 
@@ -29,6 +27,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 let displayLivePdf = () => {
   window.open(pdf, '_blank');
+}
+let showHide = (evt) => {
+  console.log(evt);
 }
 
 const anchors = ["Home", "About", "Gallery", "Press", "Resume"];
@@ -76,8 +77,10 @@ const Fullpage = () => (
                   <li className="list-stack-item">Photoshop</li>
                   <li className="list-stack-item">jQuery</li>
                 </ul>
-                  <p className="gallery-description">As the UI Designer on this project I assisted this non-profit organization with redesigning their UI for their January 2019 website launch. Duties included translated mockups into responsive, interactive features, using HTML/CSS and JavaScript. In addition to collaborating with the Marketing Director to define and implement product direction,
- visuals and overall best practice for optimal user experience. </p>
+                  <p className="gallery-description">As the UI Designer on this project I assisted this non-profit organization with redesigning their UI for their January 2019 website<span className="read-more-dots">...</span><span className="read-more-text"> launch. Duties included translated mockups into responsive, interactive features, using HTML/CSS and JavaScript. In addition to collaborating with the Marketing Director to define and implement product direction,
+ visuals and overall best practice for optimal user experience. </span></p>
+               <button onClick={(evt) => { showHide(evt.target) }} className="read-more-btn">Read more</button>
+
                  <a href="https://apriseattle.org" target="_blank" className="gallery-demo-btn">See Demo</a>
             </div>
              <img className="gallery-img" data-src={ApriImg} alt="APRI project" />
@@ -259,13 +262,13 @@ const Fullpage = () => (
 
           </div>
           <div className="section feature">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameBorder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
               <h2>Want more? Check out my interview from <a href="https://www.youtube.com/watch?v=WSi_GxfCCA8&t=63m30s" target="_blank"> GitHub Universe 2018</a></h2>
           </div>
           <div className="section contact fp-auto-height-responsive">
           <div className="contactCntr">
           <div className="contact-right-aside">
-          <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ach206"><a class="LI-simple-link" href='https://www.linkedin.com/in/ach206?trk=profile-badge'>Camille Hall</a></div>
+          <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ach206"><a className="LI-simple-link" href='https://www.linkedin.com/in/ach206?trk=profile-badge'>Camille Hall</a></div>
 
           <Footer/>
           </div>
