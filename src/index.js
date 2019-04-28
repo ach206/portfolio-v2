@@ -79,7 +79,9 @@ class App extends React.Component {
   navigation
   navigationTooltips={anchors}
   css3={true}
-	autoScrolling={true}
+  autoScrolling={true}
+  responsiveWidth={769}
+  responsiveHeight={600}
   fadingEffect={true}
   sectionsColor={["#ffffff", "#ffffff" ,"#ffffff", "#0f151f", "#ffffff"]}
   render={({ state, fullpageApi }) => {
