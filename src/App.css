@@ -24,7 +24,9 @@ a:hover {
 h1 , h2, h3, h4, h5, h6 {
   font-family: 'Viga', sans-serif;
 }
-
+.section {
+  min-height: 100vh !important;
+}
 .typingSpan,
 .typed-cursor {
   font-family: 'Viga';
@@ -144,9 +146,11 @@ ul.list-stack {
 
 .fp-controlArrow.fp-next
 {
+  z-index: 1000 !important;
   border-color: transparent transparent transparent rgba(35, 36, 37, 0.5) !important;
 }
 .fp-controlArrow.fp-prev {
+  z-index: 1000 !important;
   border-color: transparent rgba(35, 36, 37, 0.5) transparent transparent !important;
 }
 
@@ -256,7 +260,7 @@ li.socialIcons {
   min-width: calc(100vw - 80%);
 }
 
-.bHXeSm {
+.dPAOVW {
   position: absolute !important;
   color: white !important;
   top: auto;
