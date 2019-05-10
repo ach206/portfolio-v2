@@ -34,3 +34,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Dependencies
+[React.js](https://reactjs.org/)
+
+[fullPage.js | One Page Scroll sections Site Plugin](https://alvarotrigo.com/fullPage/)
+
+[typed.js](https://github.com/mattboldt/typed.js/)
+
+[Photographer: CULDEFY | Gabrielle Prawl](https://culdefy.com/)
+
+
+## Contributing
+Submit a pull request and let's get working
+
+Creative Ambition - A. Camille Hall
+
