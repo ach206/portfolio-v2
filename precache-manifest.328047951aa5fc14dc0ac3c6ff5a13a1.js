@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/csclub-mac_md.13768963.png"
   },
   {
-    "revision": "bcf7ad24b10bd1c29915",
+    "revision": "4969c4ca85836da94c42",
     "url": "/static/css/main.f8ff3e49.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/media/bandsondemand-mac_md.ffa152a3.png"
   },
   {
-    "revision": "bcf7ad24b10bd1c29915",
-    "url": "/static/js/main.bcf7ad24.chunk.js"
+    "revision": "4969c4ca85836da94c42",
+    "url": "/static/js/main.4969c4ca.chunk.js"
   },
   {
     "revision": "9e2f34bcc8787d251b9b06d35d4630c6",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/static/media/matchingGame-mac_md.d6bc5276.png"
   },
   {
-    "revision": "ed858099e57cea3ca130a7ff6f88b39a",
+    "revision": "8e4f7dedcaa6a29b382d4aa2281d6112",
     "url": "/index.html"
   }
 ];
