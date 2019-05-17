@@ -79,6 +79,7 @@ class App extends React.Component {
   navigation
   navigationTooltips={anchors}
   css3={true}
+  licenseKey={"wobwH@p8"}
   autoScrolling={true}
   responsiveWidth={769}
   responsiveHeight={600}
@@ -313,7 +314,7 @@ class App extends React.Component {
           </div>
           <div className="section feature">
           <div className="slide" data-anchor="slide1">
-          <iframe title="GitHub Universe Interview with Camille" width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameBorder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe title="GitHub Universe Interview with Camille" width="560" height="315" src="https://www.youtube.com/embed/WSi_GxfCCA8?start=3811" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               <h2>Want more? Check out my interview from <a href="https://www.youtube.com/watch?v=WSi_GxfCCA8&t=63m30s" target="_blank" rel="noopener noreferrer"> GitHub Universe 2018</a></h2>
             </div>
           <div className="slide" data-anchor="slide2">
