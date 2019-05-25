@@ -10,7 +10,7 @@ class About extends Component {
              <div className="about_section_text">
                 <p><span>Hello</span>
                 <br/>
-                    I am Camille Hall. I'm a Seattle based full-stack
+                    I am Camille Hall. I'm a Seattle-based full stack
                     developer. I enjoy contributing to projects that
                     allow me to work in cross-functional teams and encourage
                     autonomy within my position.
