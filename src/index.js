@@ -41,15 +41,7 @@ class App extends React.Component {
   displayLivePdf() {
     window.open(pdf, '_blank');
   }
-    // if (dots.style.display === "none") {
-  //   dots["0"].style.display = "inline";
-  //   btnText["0"].innerHTML = "Read more";
-  //   moreText["0"].style.display = "none";
-  // } else {
-  //   dots["0"].style.display = "none";
-  //   btnText["0"].innerHTML = "Read less";
-  //   moreText["0"].style.display = "inline";
-  // }
+
  showHide(evt) {
    let dots = document.getElementsByClassName('read-more-dots');
    let moreText = document.getElementsByClassName('read-more-text');
@@ -117,8 +109,7 @@ class App extends React.Component {
                   <li className="list-stack-item">Photoshop</li>
                   <li className="list-stack-item">jQuery</li>
                 </ul>
-                  <p className="gallery-description">As the UI Designer on this project I assisted this non-profit organization with redesigning their UI for their January 2019 website<span className="read-more-dots show">...</span><span className="read-more-text hide"> launch. Duties included translated mockups into responsive, interactive features, using HTML/CSS and JavaScript. In addition to collaborating with the Marketing Director to define and implement product direction,
- visuals and overall best practice for optimal user experience. </span></p>
+                  <p className="gallery-description">As the UI Designer on this project I assisted this non-profit organization with redesigning their interface for their January 2019 website launch.<span className="read-more-dots show">...</span><span className="read-more-text hide">Duties included translating static mockups into an responsive interactive website by using HTML/CSS and JavaScript. In addition to, collaborating with the Marketing Director to define and implement product direction, visuals and overall best practice for optimal user experience. </span></p>
  <ReadMoreBtn showhide={this.showHide} buttonId={0}/>
 
                  <a href="https://apriseattle.org" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
@@ -143,7 +134,7 @@ class App extends React.Component {
 
               </ul>
               <p className="gallery-description">This personal project required engineering a web-based application using React to develop the
-                UI<span className="read-more-dots">...</span><span className="read-more-text">. This app assists with finding venues that host live music bands in the Austin, TX area. Google
+                UI.<span className="read-more-dots">...</span><span className="read-more-text">This app assists with finding venues that host live music bands in the Austin, TX area. Google
                 Maps API and Foursquare API were used to extract real-time data. Fetch was used to make
                 asynchronous requests and handle returned data. Also, best practices included consistent use of
                 the command line and Git for version control.</span></p>
@@ -169,8 +160,7 @@ class App extends React.Component {
                   <li className="list-stack-item">Git version control</li>
 
                 </ul>
-                  <p className="gallery-description">This project consisted of engineering a PHP 
-                  website from conception to deployment<span className="read-more-dots show">...</span><span className="read-more-text hide">  for Highline College's Computer Science Club. Highlighted 
+                  <p className="gallery-description">This project consisted of engineering a PHP website from conception to deployment for Highline College's Computer Science Club.<span className="read-more-dots show">...</span><span className="read-more-text hide">  Highlighted 
                   features include a sleek dark-theme design and also an Admin portal which allows 
                   administrators to securely modify stored content on the database. </span></p>
                   <ReadMoreBtn showhide={this.showHide} buttonId={2}/>
@@ -190,7 +180,7 @@ class App extends React.Component {
                   <li className="list-stack-item">Adobe Photoshop</li>
                 </ul>
                   <p className="gallery-description">Assisted a startup company in converting hard copy paper decals into digital vector<span className="read-more-dots show">...</span><span className="read-more-text hide"> 
-                  graphics to be able to reach a larger customer base and boost sales.</span></p>
+                   graphics to be able to reach a larger customer base and boost sales.</span></p>
                   <ReadMoreBtn showhide={this.showHide} buttonId={3}/>
 
                  <a href="https://www.behance.net/gallery/71068113/Digital-Templates" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
@@ -324,19 +314,21 @@ class App extends React.Component {
 
           </div>
           </div>
-          <div className="section contact fp-auto-height-responsive">
+          <div className="section contact fp-auto-height">
           <div className="contactCntr">
-          <div className="contact-right-aside">
-          <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ach206"><a className="LI-simple-link" href='https://www.linkedin.com/in/ach206?trk=profile-badge'>Camille Hall</a></div>
-
-          <Footer/>
-          </div>
           <Document file={resumePdfView}  className="pdf-doc hvr-pulse-grow" onClick={this.displayLivePdf }
           >
           <Page pageNumber={1}/>
           </Document>
+          <div className="contact-right-aside">
+          <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ach206"><a className="LI-simple-link" href='https://www.linkedin.com/in/ach206?trk=profile-badge'>Camille Hall</a></div>
+
+          <Footer/>
+
+          </div> 
           </div>
           </div>
+
         </ReactFullpage.Wrapper>
     );
     // );
