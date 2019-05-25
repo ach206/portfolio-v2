@@ -251,6 +251,17 @@ li.socialIcons {
   padding: 0 .5em;
 }
 
+.footer-disclaimer {
+  font-size: .7em;
+  font-style: italic;
+  padding: 2.5em;
+  margin: 0;
+}
+ul.footer-icons {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ********MEDIA QUERIES for lg screen ******** */
 
 @media screen and (min-width: 780px){
