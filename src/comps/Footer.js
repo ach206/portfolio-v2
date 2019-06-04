@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+let d = new Date();
 class Footer extends Component {
     render() {
         return (
@@ -14,7 +14,7 @@ class Footer extends Component {
         <p className="footer-disclaimer">
           Made with &#10084; from Seattle <br/>
 Designed &#38; Developed by Camille Hall<br/><br/>
-            2015-2019 Creative Ambition&#8482; 
+            2015-{d.getFullYear()} Creative Ambition&#8482; 
             </p>
             </div>
         );
