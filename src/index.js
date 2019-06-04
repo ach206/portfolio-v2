@@ -68,7 +68,6 @@ class App extends React.Component {
   return (
   <div className="App">
 
-  {/* const Fullpage = () => ( */}
   <ReactFullpage
   anchors={anchors}
   navigation
@@ -81,9 +80,6 @@ class App extends React.Component {
   fadingEffect={true}
   sectionsColor={["#ffffff", "#ffffff" ,"#ffffff", "#0f151f", "#ffffff"]}
   render={({ state, fullpageApi }) => {
-    // state = {
-    //   readMoreBtnVisible: true,
-    // }
     return (
       <ReactFullpage.Wrapper>
 
@@ -121,8 +117,30 @@ class App extends React.Component {
              {/* <GalleryCard stack={'HTML'} projectName="GirlBomb" description="SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied."/>  */}
             </div>
               </div>
-
             <div className="slide" data-anchor="slide2">
+            <div className="gallery-cntr">
+            <div className="gallery-content">
+              <h3>MyReads</h3>
+              <ul className="list-stack">
+                <li className="list-stack-item list-title">Stack</li>
+                <li className="list-stack-item">React.js</li>
+                <li className="list-stack-item">React Router</li>
+                <li className="list-stack-item">Google Books API</li>
+                <li className="list-stack-item">TypeScript</li>
+                <li className="list-stack-item">HTML/CSS/JS</li>
+                <li className="list-stack-item">Git version control</li>
+
+              </ul>
+              <p className="gallery-description">Utilized Google Books API and React for this sleek, dynamic, and responsive web app.<span className="read-more-dots">...</span><span className="read-more-text">React Router was implemented in order to improve overall UX so that visitors could navigate effortlessly back and forth between pages while using this SPA. </span></p>
+                <ReadMoreBtn showhide={this.showHide} buttonId={1}/>
+
+               <a href="https://ach206.github.io/reactnd-project-myreads-starter/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
+              </div>
+              <a href="https://ach206.github.io/reactnd-project-myreads-starter/" target="_blank" rel="noopener noreferrer"><img className="gallery-img" src={myReads} alt="gallery"/></a>
+            </div>
+            </div>
+
+            <div className="slide" data-anchor="slide3">
             <div className="gallery-cntr">
             <div className="gallery-content">
               <h3>GitSocial</h3>
@@ -136,18 +154,15 @@ class App extends React.Component {
                 <li className="list-stack-item">Git version control</li>
 
               </ul>
-              <p className="gallery-description">This personal project focuses on UI - social card<span className="read-more-dots">...</span><span className="read-more-text">This app assists with finding venues that host live music bands in the Austin, TX area. Google
-                Maps API and Foursquare API were used to extract real-time data. Fetch was used to make
-                asynchronous requests and handle returned data. Also, best practices included consistent use of
-                the command line and Git for version control.</span></p>
-                <ReadMoreBtn showhide={this.showHide} buttonId={1}/>
+              <p className="gallery-description">The purpose of this project was to utilize React and GitHub’s REST API to find and display programmers within their database.<span className="read-more-dots">...</span><span className="read-more-text">Interested parties may utilize this open source project to embed the social card onto their website which will make for a cool aside plugin.</span></p>
+                <ReadMoreBtn showhide={this.showHide} buttonId={2}/>
 
                <a href="https://gh-git-social.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <a href="https://gh-git-social.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img className="gallery-img" src={gitSocial} alt="gallery"/></a>
             </div>
             </div>
-            <div className="slide" data-anchor="slide3">
+            <div className="slide" data-anchor="slide4">
             <div className="gallery-cntr">
             <div className="gallery-content">
               <h3>Bands</h3>
@@ -166,36 +181,11 @@ class App extends React.Component {
                 Maps API and Foursquare API were used to extract real-time data. Fetch was used to make
                 asynchronous requests and handle returned data. Also, best practices included consistent use of
                 the command line and Git for version control.</span></p>
-                <ReadMoreBtn showhide={this.showHide} buttonId={2}/>
+                <ReadMoreBtn showhide={this.showHide} buttonId={3}/>
 
                <a href="https://ach206.github.io/bands-on-demand" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
               <a href="https://ach206.github.io/bands-on-demand" target="_blank" rel="noopener noreferrer"><img className="gallery-img" src={BODImg} alt="gallery"/></a>
-            </div>
-            </div>
-            <div className="slide" data-anchor="slide4">
-            <div className="gallery-cntr">
-            <div className="gallery-content">
-              <h3>MyReads</h3>
-              <ul className="list-stack">
-                <li className="list-stack-item list-title">Stack</li>
-                <li className="list-stack-item">React.js</li>
-                <li className="list-stack-item">BrowserRouter</li>
-                <li className="list-stack-item">Google Books API</li>
-                <li className="list-stack-item">TypeScript</li>
-                <li className="list-stack-item">HTML/CSS/JS</li>
-                <li className="list-stack-item">Git version control</li>
-
-              </ul>
-              <p className="gallery-description">This personal project required engineering a web-based application using React to develop the
-                UI.<span className="read-more-dots">...</span><span className="read-more-text">This app assists with finding venues that host live music bands in the Austin, TX area. Google
-                Maps API and Foursquare API were used to extract real-time data. Fetch was used to make asynchronous requests and handle returned data. Also, best practices included consistent use of
-                the command line and Git for version control.</span></p>
-                <ReadMoreBtn showhide={this.showHide} buttonId={3}/>
-
-               <a href="https://ach206.github.io/reactnd-project-myreads-starter/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
-              </div>
-              <a href="https://ach206.github.io/reactnd-project-myreads-starter/" target="_blank" rel="noopener noreferrer"><img className="gallery-img" src={myReads} alt="gallery"/></a>
             </div>
             </div>
 
@@ -290,9 +280,7 @@ class App extends React.Component {
                 <li className="list-stack-item">HTML/CSS</li>
                 <li className="list-stack-item">Wix</li>
               </ul>
-              <p className="gallery-description">Assisted in redesigning an existing website including creating prototypes,<span className="read-more-dots show">...</span><span className="read-more-text hide">  graphics
-              and optimizing images for the company’s web pages in time for their new product
-              launch.</span></p>   
+              <p className="gallery-description">I worked as the lead designer and developer to modernize an existing eCommerce website in time for their newest product release.<span className="read-more-dots show">...</span><span className="read-more-text hide">This included compiling data on the target users for UX purposes then portraying how the optimizations would look and feel through wire frames and prototypes. Lastly, testing for bugs and usability then publishing the new changes to the public.</span></p>   
               <ReadMoreBtn showhide={this.showHide} buttonId={8}/>
                <a href="https://www.girlbomb.com/" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
@@ -311,8 +299,7 @@ class App extends React.Component {
                   <li className="list-stack-item">Adobe Illustrator</li>
                   <li className="list-stack-item">Shopify</li>
                 </ul>
-                  <p className="gallery-description">Redesigned eCommerce website, created company logo,<span className="read-more-dots show">...</span><span className="read-more-text hide">  and produced marketing graphics
-                  that increased web traffic by 33%.</span></p>
+                  <p className="gallery-description">Worked along side with the CEO and sales team to redesign this Korean pop culture eCommerce website.<span className="read-more-dots show">...</span><span className="read-more-text hide"> My work included redesigning the front-end interface on this Shopfiy website, sprucing up the company logo, and creating fresh new marketing graphics that lead to web traffic being increased by 33%.</span></p>
                   <ReadMoreBtn showhide={this.showHide} buttonId={9}/>
                  <a href="https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
                 </div>
@@ -328,7 +315,7 @@ class App extends React.Component {
                 <li className="list-stack-item list-title">Stack</li>
                 <li className="list-stack-item">Adobe Photoshop</li>
               </ul>
-                <p className="gallery-description">Lead designer for this client's Facebook campaigns. Established, <span className="read-more-dots show">...</span><span className="read-more-text hide">designed and managed implementation and consistency of brand guidelines for marketing assets and other web graphics.</span></p>  
+                <p className="gallery-description">For this project, I was designated as lead designer for this client's Facebook campaign ads.<span className="read-more-dots show">...</span><span className="read-more-text hide">In addition to implementing and maintaining brand guidelines for marketing assets and other web graphics.</span></p>  
                 <ReadMoreBtn showhide={this.showHide} buttonId={10}/>
                <a href="https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
@@ -362,7 +349,7 @@ class App extends React.Component {
                 <li className="list-stack-item">Adobe Illustrator</li>
                 <li className="list-stack-item">Adobe Photoshop</li>
               </ul>
-              <p className="gallery-description"> All hail the matching game! This one holds a speical place in my heart because it was my first <span className="read-more-dots show">...</span><span className="read-more-text hide">ever programming project.The memory game represented my first opportunity to fully combine my skills in HTML, CSS, and JavaScript. The primary focus was centered around event handlers and functions. Future developments include refactoring to ES6 and redesigning the UI. </span></p>  
+              <p className="gallery-description">What a fun piece to work on! I collaborated with Highline College to create this poster design for their 6th Annual Y.E.L.L. Summit which empowers young women of color to excel in academics and embrace acceptance of self.<span className="read-more-dots show">...</span><span className="read-more-text hide">I utilized Photoshop and Illustrator for this design then packaged this project for the printers. Final output was 11x18" and 24x36" posters plus branded T-Shirts for attendees and volunteers.</span></p>  
               <ReadMoreBtn showhide={this.showHide} buttonId={12}/>
                <a href="https://www.behance.net/gallery/80378759/YELL-Poster" target="_blank" rel="noopener noreferrer" className="gallery-demo-btn">See Demo</a>
               </div>
