@@ -147,6 +147,7 @@ ul.list-stack {
 .fp-controlArrow.fp-next
 {
   z-index: 1000 !important;
+  padding-right: 0.5em;
   border-color: transparent transparent transparent rgba(35, 36, 37, 0.5) !important;
 }
 .fp-controlArrow.fp-prev {
