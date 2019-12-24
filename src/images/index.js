@@ -7,10 +7,9 @@ export { default as FroggerImg } from './frogger-mac_md.png';
 export { default as FullmoonReleaseImg } from './fullmoon-release-mac_md.png';
 export { default as GirlBombImg } from './girlbomb-mac_md.png';
 export { default as GitHubImg } from './githubUniverse-mac-2_md.png';
-export { default as KdramaImg } from './kdrama-mac_md.png';
+export { default as KdramaImg } from './kdrama-mac-md.png'
 export { default as KdramaFbImg  }from './kdrama-fb-mac_md.png';
 export { default as matchGameImg } from './matchingGame-mac_md.png';
-export { default as resumeImg } from './resume-pic.png';
 export { default as gitSocial } from './gitsocial-mac-md.png';
 export { default as myReads } from './myreads-mac-md.png';
 export { default as yellPoster } from './yell-mac-md.png';
