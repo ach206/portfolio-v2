@@ -24,7 +24,9 @@ a:hover {
 h1 , h2, h3, h4, h5, h6 {
   font-family: 'Viga', sans-serif;
 }
-
+.section {
+  min-height: 100vh !important;
+}
 .typingSpan,
 .typed-cursor {
   font-family: 'Viga';
@@ -60,11 +62,12 @@ h1 , h2, h3, h4, h5, h6 {
   font-variant: all-small-caps;
 }
 
-figure {
-  width: calc(100vw - 30%);
-}
 .about-img {
   width: calc(100vw - 30%);
+}
+
+.bHXeSm {
+  z-index: 4 !important;
 }
 
 .bHXeSm blockquote {
@@ -75,6 +78,7 @@ figure {
   font-weight: 700;
   padding-bottom: 1em;
 }
+
 /* ********GALLERY STYLES******* */
 
 .gallery-cntr {
@@ -136,20 +140,49 @@ ul.list-stack {
 .gallery-demo-btn {
   text-decoration: none;
   font-family: inherit;
-  padding: .5em;
+  margin: .5em;
   z-index: 3;
 }
 
 .fp-controlArrow.fp-next
 {
-  border-color: transparent transparent transparent rgba(35, 36, 37, 0.5);
+  z-index: 1000 !important;
+  padding-right: 0.5em;
+  border-color: transparent transparent transparent rgba(35, 36, 37, 0.5) !important;
 }
 .fp-controlArrow.fp-prev {
-  border-color: transparent rgba(35, 36, 37, 0.5) transparent transparent;
+  z-index: 1000 !important;
+  border-color: transparent rgba(35, 36, 37, 0.5) transparent transparent !important;
 }
 
 .fp-slides {
   overflow: overlay;
+}
+
+.read-more-dots {
+  display: inline-block;
+}
+
+.read-more-text {
+  display: none;
+}
+
+.read-more-btn {
+  margin: .5em auto;
+}
+/* *******FEATURE PAGE********** */
+.feature h2 {
+  color: #ffffff;
+}
+.feature a:hover, .feature a:active {
+  color: #ffdead;
+}
+.feature a {
+  color: #00ffff;
+}
+
+.feature iframe {
+  max-width: 100vw !important;
 }
 /* *********RESUME PAGE******* */
 .contact-cv {
@@ -219,6 +252,17 @@ li.socialIcons {
   padding: 0 .5em;
 }
 
+.footer-disclaimer {
+  font-size: .7em;
+  font-style: italic;
+  padding: 2.5em;
+  margin: 0;
+}
+ul.footer-icons {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ********MEDIA QUERIES for lg screen ******** */
 
 @media screen and (min-width: 780px){
@@ -228,12 +272,13 @@ li.socialIcons {
   min-width: calc(100vw - 80%);
 }
 
-.bHXeSm {
+.dPAOVW {
   position: absolute !important;
   color: white !important;
   top: auto;
   bottom: auto;
   right: calc(100vw / 2.2);
+  z-index: inherit;
   }
 
 .about-img {
@@ -280,7 +325,15 @@ li.socialIcons {
   color: white;
   background: #2e6195;
 }
+/* read more read less */
 
+.read-more-dots, .read-more-btn {
+  display: none;
+}
+
+.read-more-text {
+  display: inline-block;
+}
 
 }
 
