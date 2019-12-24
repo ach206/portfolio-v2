@@ -1,107 +1,102 @@
 [
 { 
-  "name": "Bands On Demand",
-  "id": "bands",
-  "img": "images/bands.png",
+  "name": "APRI Seattle",
+  "id": "apri",
+  "img": "ApriImg",
   "type": "React single page web application",
-  "url": "https://creativeambition.net/bands-on-demand"
+  "url": "https://apriseattle.org",
+  "stack": [  ["Sketch"], ["HTML"], ["CSS"], ["Photoshop"],["jQuery"] ],
+  "description": "As the UI Designer on this project I assisted this non-profit organization with redesigning their UI for their January 2019 website launch. Duties included translated mockups into responsive, interactive features, using HTML/CSS and JavaScript. In addition to collaborating with the Marketing Director to define and implement product direction, visuals and overall best practice for optimal user experience."
 },
+{ 
+  "name": "Bands",
+  "id": "bands",
+  "img": "BODImg",
+  "type": "React single page web application",
+  "url": "https://ach206.github.io/bands-on-demand",
+  "stack": [
+    ["React.js"], ["Foursquare API"], ["Google Maps API"], ["TypeScript"], ["HTML/CSS/JS"], ["Git version control"]
+  ],
+  "description": "This personal project required engineering a web-based application using React to develop the UI. This app assists with finding venues that host live music bands in the Austin, TX area. Google Maps API and Foursquare API were used to extract real-time data. Fetch was used to make asynchronous requests and handle returned data. Also, best practices included consistent use of the command line and Git for version control."
+},
+{ 
+  "name": "Computer Science Club",
+  "id": "cs_club",
+  "img": "CSClubImg",
+  "type": "React single page web application",
+  "url": "https://chelan.highline.edu/~ach206/215/Final_Computer_Science_Club/pages/",
+  "stack": [
+    ["PHP"], ["HTML/CSS/JS"], ["MySQL"], ["Google Calender API"], ["Figma"], ["Git version control"]
+  ],
+  "description": "This project consisted of engineering a PHP website from conception to deployment for Highline College's Computer Science Club. Highlighted features include a sleek dark-theme design and also an Admin portal which allows administrators to securely modify stored content on the database."
+},
+{ 
+  "name": "Edens Savvy Creations",
+  "id": "edens_savvy",
+  "img": "EdenSavvyImg",
+  "type": "React single page web application",
+  "url": "https://www.behance.net/gallery/71068113/Digital-Templates",
+  "stack": [
+    ["Adobe Illustrator"], ["Adobe Photoshop"]
+  ],
+  "description": "Assisted a startup company in converting hard copy paper decals into digital vector graphics to be able to reach a larger customer base and boost sales."
+},
+{  
+  "name": "Frogger Game",
+  "id": "frogger",
+  "img": "FroggerImg",
+  "type": "JavaScript. Games.",
+  "url": "https://ach206.github.io/frontend-nanodegree-arcade-game/",
+  "stack": [
+    ["JavaScript OOP"], ["HTML5 Canvas"], ["CSS"], ["Git version control"]
+  ],
+  "description": "Used HTML's Canvas and JavaScript's ES6 Class to implement entities to the game including the player character and enemies to recreate the classic 1981 arcade game Frogger. Game Engine loop provided by Udacity."
+}, 
+{  
+  "name": "Full Moon Release",
+  "id": "fullmoon_release",
+  "img": "FullmoonReleaseImg",
+  "type": "JavaScript. Games.",
+  "url": "https://www.behance.net/gallery/73073601/Release",
+  "stack": [ ["Adobe Photoshop"], ["Unsplash"] ],
+  "description": "An expressive piece of photo collage art represenative of the purging of old baggage that happens during each full moon cycle."
+}, 
 {  
   "name": "Girlbomb",
   "id": "girlBomb",
-  "img": "images/girlbomb.png",
+  "img": "GirlBombImg",
   "type": "Web Design. UI. Graphic Design.",
-  "url": "http://girlbomb.com"
+  "url": "http://girlbomb.com",
+  "stack": [ ["Sketch"], ["Adobe Photoshop"], ["HTML/CSS"], ["Wix"] ],
+  "description": "Assisted in redesigning an existing website including creating prototypes, graphics and optimizing images for the company’s web pages in time for their new product launch."
 },  
 {
   "name": "K-Drama Connection",
   "id": "kdrama",
-  "img": "images/kd_screenshot.png",
+  "img": "KdramaImg",
   "type": "Branding. UI. Graphic Design.",
-  "url": "https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign"
+  "url": "https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign",
+  "stack": [
+    ["Sketch"], ["HTML/CSS"], ["Adobe Illustrator"], ["Shopify"]
+  ],
+  "description": "Redesigned eCommerce website, created company logo, and produced marketing graphics that increased web traffic by 33%."
 },
 {
-  "name": "SCSKC Web Project",
-  "id": "scskc",
-  "img": "images/scskc.png",
-  "type": "JavaScript. UI. Branding.",
-  "url": "https://creativeambition.net/scskc/"
-},  
-{  
-  "name": "Camille's Corner",
-  "id": "pw",
-  "img": "images/pw_screenshot.png",
-  "type": "UX. UI. Graphic Design.",
-  "url": "images/pw_screenshot.png"
-  },
-{  
-  "name": "K-Drama Facebook Ad",
-  "id": "kdBanner",
-  "img": "images/fbbanner-800px.png",
-  "type": "Graphic Design. Adobe Photoshop. Branding. Ads",
-  "url": "https://www.behance.net/gallery/71069549/KD-Website-Redesign"
-},  
-{
-  "name": "Release",
-  "id": "release",
-  "img": "images/release.jpg",
-  "type": "Digital Collage Art. Graphic Design. Adobe Photoshop.",
-  "url": "https://www.behance.net/gallery/73073601/Release"
-},  
-{
-  "name": "Delyla Illustrator Project",
-  "id": "delyla",
-  "img": "images/Delyla-800-01.png",
-  "type": "Graphic Design. Adobe Illustrator.",
-  "url": "https://www.behance.net/gallery/71068113/Digital-Templates"
-},  
-{  
-  "name": "Mock InDesign Project",
-  "id": "toyo",
-  "img": "images/TOYO-800px.png",
-  "type": "Page Layout. Adobe InDesign.",
-  "url": "images/TOYO-800px.png"
+  "name": "K-Drama Connection",
+  "id": "kdrama_1",
+  "img": "KdramaFbImg",
+  "type": "Branding. UI. Graphic Design.",
+  "url": "https://www.behance.net/gallery/71069549/K-Drama-Website-Redesign",
+  "stack": [ ["Adobe Photoshop"] ],
+  "description": "SSR is supported however the server-rendered html will not be styled, this is because window must be present in order to properly set height + width of slides. So long as you rehydrate your fullpage component in the browser environment, regular styles will be applied."
 },
 {  
-  "name": "Margarita Illustrator Project",
-  "id": "margarita",
-  "img": "images/Margarita-800.png",
-  "type": "Graphic Design. Adobe Illustrator. Vector.",
-  "url": "https://www.behance.net/gallery/71068113/Digital-Templates"
-},
-{  
-  "name": "K-Drama Ad",
-  "id": "fandom",
-  "img": "images/fandom.png",
-  "type": "Graphic Design. Adobe Photoshop. Canva.",
-  "url": "https://www.behance.net/gallery/71069549/KD-Website-Redesign"
-},
-{  
-  "name": "Sigma Gamma Rho Flyer",
-  "id": "sgrho",
-  "img": "images/SigmaBlueContrast-400.png",
-  "type": "Graphic Design. Print. Adobe InDesign.",
-  "url": "https://www.behance.net/gallery/22616463/Printer-ready-sample-flyer"
-} ,
-{  
-  "name": "Classic Arcade Game",
-  "id": "frogger",
-  "img": "images/Frogger.png",
-  "type": "JavaScript. Games.",
-  "url": "https://ach206.github.io/frontend-nanodegree-arcade-game/"
-}, 
-{  
-  "name": "Matching Game Project",
+  "name": "Matching Game",
   "id": "matchingGame",
-  "img": "images/matching-game.png",
+  "img": "matchGameImg",
   "type": "JavaScript. Games.",
-  "url": "https://ach206.github.io/memory-game/"
-  },
-{  
-  "name": "GitHub Universe Interview",
-  "id": "githubUniverse",
-  "img": "images/githubUniverse.png",
-  "type": "My First Universe Experience",
-  "url": "http://www.youtube.com/watch?v=WSi_GxfCCA8&t=63m30s"
+  "url": "https://ach206.github.io/memory-game/",
+  "stack": [ ["HTML"], ["JavaScript"], ["CSS"] ],
+  "description": "All hail the matching game! This one holds a speical place in my heart because it was my first ever programming project.The memory game represented my first opportunity to fully combine my skills in HTML, CSS, and JavaScript. The primary focus was centered around event handlers and functions. Future developments include refactoring to ES6 and redesigning the UI."
 }
 ]
