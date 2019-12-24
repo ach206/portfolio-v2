@@ -51,7 +51,6 @@ class App extends React.Component {
           navigation
           navigationTooltips={anchors}
           css3={true}
-          licenseKey={"wobwH@p8"}
           autoScrolling={true}
           responsiveWidth={769}
           responsiveHeight={600}
