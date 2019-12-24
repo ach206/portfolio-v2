@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CamilleImg from './../images/DSC3135.jpg';
+import CamilleImg from './../images/_DSC3098.jpg';
 
 
 class About extends Component {
@@ -10,8 +10,7 @@ class About extends Component {
              <div className="about_section_text">
                 <p><span>Hello</span>
                 <br/>
-                    I am Camille Hall. I'm a Seattle based full-stack
-                    developer. I enjoy contributing to projects that
+                    I am Camille Hall. I'm an Austin based Software Engineer. I enjoy contributing to projects that
                     allow me to work in cross-functional teams and encourage
                     autonomy within my position.
                 </p>
