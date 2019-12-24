@@ -171,7 +171,7 @@ ul.list-stack {
   margin: .5em auto;
 }
 /* *******FEATURE PAGE********** */
-.feature h2 {
+.feature h2, h1 {
   color: #ffffff;
 }
 .feature a:hover, .feature a:active {
