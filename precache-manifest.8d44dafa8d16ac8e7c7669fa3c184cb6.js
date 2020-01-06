@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/girlbomb-mac_md.d49a53bf.png"
   },
   {
-    "revision": "3a2c23d870f5e8d99649",
+    "revision": "1ae246d0e78432f10423",
     "url": "/static/css/main.e989f4ec.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/static/media/fullmoon-release-mac_md.6fd22881.png"
   },
   {
-    "revision": "3a2c23d870f5e8d99649",
-    "url": "/static/js/main.3a2c23d8.chunk.js"
+    "revision": "1ae246d0e78432f10423",
+    "url": "/static/js/main.1ae246d0.chunk.js"
   },
   {
     "revision": "e5b2254728d01d5a8d7eaa6094c3d1d0",
@@ -81,10 +81,10 @@ self.__precacheManifest = [
   },
   {
     "revision": "3ce5c636b74d121f447f61993f2e02be",
-    "url": "/static/media/_DSC3098.3ce5c636.jpg"
+    "url": "/static/media/DSC3098.3ce5c636.jpg"
   },
   {
-    "revision": "43c26dffa57d74ea94f1254bd995df1b",
+    "revision": "0b66e418be51b3325457219a610ec491",
     "url": "/index.html"
   }
 ];
