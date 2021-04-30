@@ -13,7 +13,7 @@ class TypingAni extends Component {
     render() {
         return (
             <div>
-                <span style={{color: '#fff', fontVariant: 'all-small-caps'}} className='typingSpan'></span>
+                <span className='typingSpan'></span>
             </div>
         )
     }
