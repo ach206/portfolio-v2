@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import Typed from 'typed.js';
+import React, {Component} from 'react'
+import Typed from 'typed.js'
 let data = {
-    strings: ["Frontend Web Dev", "UI Engineer", "Camille Hall"],
-    typeSpeed: 40
+    strings: ['new site coming soon...'],
+    startDelay: 1000,
+    typeSpeed: 60,
 }
-let typedEl;
 class TypingAni extends Component {
     componentDidMount() {
-        typedEl = new Typed('.typingSpan', data)
+        new Typed('.typingSpan', data)
     }
 
     render() {
         return (
             <div>
-                <span className="typingSpan"></span>
+                <span style={{color: '#fff', fontVariant: 'all-small-caps'}} className='typingSpan'></span>
             </div>
-        );
+        )
     }
 }
 
-export default TypingAni;
+export default TypingAni
