@@ -5,7 +5,7 @@
   "homepage": "https://creativeambition.net",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.13",
-    "fullpage.js": "^3.0.4",
+    "fullpage.js": "^4.0.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-pdf": "^4.0.5",
