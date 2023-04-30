@@ -31,7 +31,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.29.1",
     "browser-sync-webpack-plugin": "^2.2.2",
     "gh-pages": "^2.0.1",
     "gulp": "^4.0.0"
